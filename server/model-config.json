@@ -8,7 +8,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -27,15 +28,15 @@
     "public": false
   },
   "Member": {
-    "dataSource": "db",
+    "dataSource": "mainDs",
     "public": true
   },
   "Group": {
-    "dataSource": "db",
+    "dataSource": "mainDs",
     "public": true
   },
   "PrayerRequest": {
-    "dataSource": "db",
+    "dataSource": "mainDs",
     "public": true
   }
 }
