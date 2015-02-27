@@ -33,5 +33,9 @@
   "Group": {
     "dataSource": "db",
     "public": true
+  },
+  "PrayerRequest": {
+    "dataSource": "db",
+    "public": true
   }
 }

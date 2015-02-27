@@ -1,24 +1,17 @@
 {
-  "name": "Group",
+  "name": "PrayerRequest",
   "base": "PersistedModel",
   "idInjection": true,
   "properties": {
-    "name": {
+    "request": {
       "type": "string",
       "required": true
-    },
-    "type": {
-      "type": "string",
-      "required": true
-    },
-    "maxSize": {
-      "type": "number"
     }
   },
   "validations": [],
   "relations": {
-    "members": {
-      "type": "hasMany",
+    "member": {
+      "type": "belongsTo",
       "model": "Member",
       "foreignKey": ""
     }

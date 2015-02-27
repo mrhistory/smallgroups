@@ -31,7 +31,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "prayerRequests": {
+      "type": "hasMany",
+      "model": "PrayerRequest",
+      "foreignKey": ""
+    },
+    "groups": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": []
 }
