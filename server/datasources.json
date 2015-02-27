@@ -4,12 +4,12 @@
     "connector": "memory"
   },
   "mainDs": {
-    "name": "mainDs",
-    "connector": "mongodb",
     "host": "localhost",
     "port": 27017,
     "database": "smallgroups",
     "username": "dev",
-    "password": "dev"
+    "password": "dev",
+    "name": "mainDs",
+    "connector": "mongodb"
   }
 }
