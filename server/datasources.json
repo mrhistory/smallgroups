@@ -5,11 +5,11 @@
   },
   "mainDs": {
     "host": "localhost",
-    "port": 27017,
+    "port": 3306,
     "database": "smallgroups",
     "username": "dev",
     "password": "dev",
     "name": "mainDs",
-    "connector": "mongodb"
+    "connector": "mysql"
   }
 }
