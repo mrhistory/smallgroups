@@ -32,14 +32,14 @@
   },
   "validations": [],
   "relations": {
-    "prayerRequests": {
+    "groupMemberships": {
       "type": "hasMany",
-      "model": "PrayerRequest",
+      "model": "GroupMembership",
       "foreignKey": ""
     },
-    "groups": {
-      "type": "hasAndBelongsToMany",
-      "model": "Group",
+    "groupLeaderships": {
+      "type": "hasMany",
+      "model": "GroupLeadership",
       "foreignKey": ""
     }
   },

@@ -2,6 +2,9 @@
   "name": "Group",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "properties": {
     "name": {
       "type": "string",
@@ -13,13 +16,21 @@
     },
     "maxSize": {
       "type": "number"
+    },
+    "description": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "members": {
-      "type": "hasAndBelongsToMany",
-      "model": "Member",
+    "groupMemberships": {
+      "type": "hasMany",
+      "model": "GroupMembership",
+      "foreignKey": ""
+    },
+    "groupLeaderships": {
+      "type": "hasMany",
+      "model": "GroupLeadership",
       "foreignKey": ""
     }
   },

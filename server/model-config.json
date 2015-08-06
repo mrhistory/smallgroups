@@ -33,10 +33,24 @@
   },
   "Group": {
     "dataSource": "mainDs",
-    "public": true
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "PrayerRequest": {
     "dataSource": "mainDs",
     "public": true
+  },
+  "GroupMembership": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "GroupLeadership": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
