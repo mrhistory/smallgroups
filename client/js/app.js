@@ -3,11 +3,25 @@
     'ngRoute',
     'ngResource',
     'angular-flash.service',
-    'angular-flash.flash-alert-directive'
+    'angular-flash.flash-alert-directive',
+    'lbServices'
   ]);
 
   sg.app.config([ '$routeProvider', 'flashProvider', '$httpProvider',
     function($routeProvider, flashProvider, $httpProvider) {
+      $httpProvider.interceptors.push(function($q, $location, LoopBackAuth) {
+        return {
+          responseError: function(rejection) {
+            if (rejection.status == 401) {
+              LoopBackAuth.clearUser();
+              LoopBackAuth.clearStorage();
+              $location.nextAfterLogin = $location.path();
+              $location.path('/login');
+            }
+            return $q.reject(rejection);
+          }
+        };
+      });
 
       flashProvider.errorClassnames.push('alert-danger');
       flashProvider.warnClassnames.push('alert-warning');

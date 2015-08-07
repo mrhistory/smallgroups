@@ -1,24 +1,8 @@
 (function(sg) {
-  sg.app.directive('formAutofillFix', [ '$timeout',
-    function($timeout) {
-      return function(scope, element, attrs) {
-        element.prop('method', 'post');
-        if (attrs.ngSubmit) {
-          $timeout(function() {
-            element
-              .unbind('submit')
-              .bind('submit', function(event) {
-                event.preventDefault();
-                element
-                  .find('input, textarea, select')
-                  .trigger('input')
-                  .trigger('change')
-                  .trigger('keydown');
-                scope.$apply(attrs.ngSubmit);
-              });
-          });
-        }
-      }
-    }
-  ]);
+  sg.app.directive('navbar', function() {
+    var directive = {};
+    directive.restrict = 'AE';
+    directive.templateUrl = 'views/partials/navbar.html';
+    return directive;
+  });
 })(window.sg = window.sg || {});

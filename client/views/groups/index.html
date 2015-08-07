@@ -7,11 +7,11 @@
       </div>
       <div ng-click="showGroup(group.id)">
         <h3>{{group.name}}</h3>
-        <p>{{group.summary}}</p>
+        <p>{{group.description}}</p>
         <p>
-          Max Members: {{group.maxMembers}}
+          Max Members: {{group.maxSize}}
           <br>
-          Openings: {{group.maxMembers - group.currentMembers}}
+          Openings: {{group.maxSize - group.currentSize}}
         </p>
       </div>
     </div>
