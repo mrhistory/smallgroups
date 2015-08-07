@@ -1,0 +1,28 @@
+<iframe src="sink.html" name="sink" style="display: none"></iframe>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well">
+      <form name="loginForm" action="sink.html" target="sink" method="post" ng-submit="login(loginCreds)" novalidate form-autofill-fix>
+        <h2>Log In</h2>
+        <br>
+        <div class="form-group">
+          <label>Email</label>
+          <br>
+          <input type="email" ng-model="loginCreds.email" autofocus="true" class="form-control" required="true">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <br>
+          <input type="password" ng-model="loginCreds.password" autocomplete="off" class="form-control" required="true">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" ng-model="rememberMe">
+          <label>Remember Me</label>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn btn-primary"> Log In </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

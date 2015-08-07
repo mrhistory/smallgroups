@@ -1,0 +1,47 @@
+<div class="col-md-8 col-md-offset-2 row" ng-show="group">
+  <h1>{{group.name}}</h1>
+  <div class="col-md-8">
+    <div class="form-group">
+      <label>Group Description</label>
+      <br>
+      <p class="form-control-static">{{group.summary}}</p>
+    </div>
+    <div class="form-group">
+      <label>Max Members</label>
+      <br>
+      <p class="form-control-static">{{group.maxMembers}}</p>
+    </div>
+    <div class="form-group">
+      <label>Openings</label>
+      <br>
+      <p class="form-control-static">{{group.maxMembers - group.currentMembers}}</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Group Leaders</label>
+      <br>
+      <p class="form-control-static">
+        <span ng-repeat="leader in group.leaders">
+          {{leader.user.firstName}} {{leader.user.lastName}}
+          <br>
+        </span>
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Group Members</label>
+      <br>
+      <p class="form-control-static">
+        <span ng-repeat="member in group.members">
+          {{member.user.firstName}} {{member.user.lastName}}
+          <br>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <hr>
+    <button class="btn btn-primary"> Edit </button>
+    <button class="btn btn-info" ng-click="back()"> Back </button>
+  </div>
+</div>

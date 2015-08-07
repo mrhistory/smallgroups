@@ -1,0 +1,29 @@
+<div class="row">
+  <nav class="navbar navbar-default">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/">Small Groups</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse" ng-controller="NavbarController">
+        <ul class="nav navbar-nav" ng-if="currentUser">
+            <li><a ng-click="goToGroups()">Groups</a></li>
+            <li><a href="#">Prayer Requests</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="currentUser">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!currentUser">
+            <li><a href="#">Sign Up</a></li>
+            <li><a ng-click="goToLogin()">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
