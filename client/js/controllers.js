@@ -1,24 +1,14 @@
 (function(sg) {
-  sg.app.controller('GroupController', [ '$scope', '$location', '$resource', '$routeParams', 'flash', 'Group', 'Member',
-    function($scope, $location, $resource, $routeParams, flash, Group, Member) {
+  sg.app.controller('GroupController', [ '$scope', '$location', '$resource', '$routeParams', 'flash', 'Group', 'GroupService',
+    function($scope, $location, $resource, $routeParams, flash, Group, GroupService) {
       Group.findById({id: $routeParams.groupId},
         function(group) { 
           $scope.group = group;
-          Group.groupMemberships({id: $scope.group.id}, function(list) {
-            $scope.group.groupMemberships = list;
-            $scope.group.groupMemberships.forEach(function(groupMembership) {
-              Member.findById({id: groupMembership.memberId}, function(member) {
-                groupMembership.member = member;
-              });
-            });
+          GroupService.getGroupMembers($scope.group.id, function(groupMemberships) {
+            $scope.group.groupMemberships = groupMemberships;
           });
-          Group.groupLeaderships({id: $scope.group.id}, function(list) {
-            $scope.group.groupLeaderships = list;
-            $scope.group.groupLeaderships.forEach(function(groupLeadership) {
-              Member.findById({id: groupLeadership.memberId}, function(member) {
-                groupLeadership.member = member;
-              });
-            });
+          GroupService.getGroupLeaders($scope.group.id, function(groupLeaderships) {
+            $scope.group.groupLeaderships = groupLeaderships;
           });
         },
         function(httpResponse) {
