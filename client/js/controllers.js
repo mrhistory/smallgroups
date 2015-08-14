@@ -41,8 +41,8 @@
   ]);
 
 
-  sg.app.controller('LoginController', [ '$scope', '$location', 'flash', '$route', 'Member',
-    function($scope, $location, flash, $route, Member) {
+  sg.app.controller('LoginController', [ '$scope', '$location', 'flash', 'Member',
+    function($scope, $location, flash, Member) {
       $scope.login = function(loginCreds) {
         Member.login({ rememberMe: $scope.rememberMe }, $scope.loginCreds, function() {
           flash.error = '';
@@ -75,7 +75,7 @@
         if (($location.path() === '/login' || $location.path() === '/signup') && $scope.loggedIn) {
           $location.path('/');
         }
-        if (($location.path() !== '/login' || $location.path() !== '/signup') && !$scope.loggedIn) {
+        if (($location.path() !== '/login' && $location.path() !== '/signup') && !$scope.loggedIn) {
           $location.path('/login');
         }
       });
@@ -106,6 +106,39 @@
       $scope.goToMain = function() { $location.path('/'); }
       $scope.goToGroups = function() { $location.path('/groups'); }
       $scope.goToLogin = function() { $location.path('/login'); }
+      $scope.goToSignUp = function() { $location.path('/signup'); }
+    }
+  ]);
+
+  sg.app.controller('SignUpController', ['$scope', '$location', 'flash', 'Member',
+    function($scope, $location, flash, Member) {
+      $scope.signup = function(newMember) {
+        if ($scope.newMember.password === $scope.newMember.passwordConfirmation) {
+          Member.create(getMember($scope.newMember),
+            function() {
+              Member.login({ email: $scope.newMember.email, password: $scope.newMember.password },
+                function() {
+                  flash.error = '';
+                  $location.path('/');
+                }, function(httpResponse) {
+                  flash.error = httpResponse.data.error.message;
+                });
+            }, function(httpResponse) {
+              flash.error = httpResponse.data.error.message;
+            });
+        } else {
+          flash.error = 'Password and Password Confirmation do not match.';
+        }
+      }
+
+      var getMember = function(member) {
+        return {
+          firstName: member.firstName,
+          lastName: member.lastName,
+          email: member.email,
+          password: member.password
+        };
+      }
     }
   ]);
 })(window.sg = window.sg || {});
