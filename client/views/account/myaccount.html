@@ -1,0 +1,46 @@
+<div class="col-md-8 col-md-offset-2 row">
+  <form name="myAccountForm" ng-submit="saveMember()">
+    <h1>My Account</h1>
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="text" ng-model="member.firstName" autofocus="true" class="form-control" required="true" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="member.lastName" class="form-control" required="true" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <input type="email" ng-model="member.email" class="form-control" required="true" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input type="password" ng-model="member.password" autocomplete="off" class="form-control" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <input type="password" ng-model="passwordConfirmation" autocomplete="off" class="form-control" placeholder="Password Confirmation">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <input type="phone" ng-model="member.phoneNumber" class="form-control" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="member.address1" class="form-control" placeholder="Address 1">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="member.address2" class="form-control" placeholder="Address 2">
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="member.city" class="form-control" placeholder="City">
+      </div>
+      <div class="form-group">
+        <select ng-model="member.state" ng-options="state.abbreviation as state.name for state in states"></select>
+      </div>
+      <div class="form-group">
+        <input type="text" ng-model="member.zipCode" class="form-control" placeholder="Zip Code">
+      </div>
+    </div>
+    <div class="col-md-12 actions">
+      <hr>
+      <button type="submit" class="btn btn-primary"> Save </button>
+    </div>
+  </form>
+</div>

@@ -17,7 +17,7 @@
           <li><a href="#">Prayer Requests</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" ng-if="loggedIn">
-          <li><a href="#">My Account</a></li>
+          <li ng-class="getClass('/myaccount')"><a ng-click="goToMyAccount()">My Account</a></li>
           <li><a ng-click="logout()">Logout</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" ng-if="!loggedIn">

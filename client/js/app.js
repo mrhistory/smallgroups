@@ -41,6 +41,10 @@
           templateUrl: 'views/signup/signup.html',
           controller: 'SignUpController'
         })
+        .when('/myaccount', {
+          templateUrl: 'views/account/myaccount.html',
+          controller: 'MyAccountController'
+        })
         .when('/groups', {
           templateUrl: 'views/groups/index.html',
           controller: 'GroupsController'
