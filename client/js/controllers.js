@@ -45,7 +45,7 @@
     function($scope, $location, flash, Member) {
       $scope.login = function(loginCreds) {
         Member.login({ rememberMe: $scope.rememberMe }, $scope.loginCreds, function() {
-          flash.error = '';
+          flash.clean();
           var next = $location.nextAfterLogin || '/';
           $location.nextAfterLogin = null;
           $location.path(next);
@@ -64,8 +64,8 @@
   ]);
 
 
-  sg.app.controller('NavbarController', [ '$scope', '$location', '$route', 'Member',
-    function($scope, $location, $route, Member) {
+  sg.app.controller('NavbarController', [ '$scope', '$location', '$route', 'Member', 'flash',
+    function($scope, $location, $route, Member, flash) {
       $scope.isCollapsed = true;
       $scope.loggedIn = Member.isAuthenticated();
 
@@ -84,8 +84,10 @@
         Member.logout(function() {
           $location.path('/login');
           $scope.loggedIn = false;
+          flash.clean();
+          flash.success = 'Logged out successfully.';
         });
-      }
+      };
 
       $scope.getClass = function(path) {
         if (path === '/') {
@@ -103,10 +105,11 @@
         }
       };
 
-      $scope.goToMain = function() { $location.path('/'); }
-      $scope.goToGroups = function() { $location.path('/groups'); }
-      $scope.goToLogin = function() { $location.path('/login'); }
-      $scope.goToSignUp = function() { $location.path('/signup'); }
+      $scope.goToMain = function() { $location.path('/'); };
+      $scope.goToGroups = function() { $location.path('/groups'); };
+      $scope.goToLogin = function() { $location.path('/login'); };
+      $scope.goToSignUp = function() { $location.path('/signup'); };
+      $scope.goToMyAccount = function() { $location.path('/myaccount'); };
     }
   ]);
 
@@ -118,7 +121,7 @@
             function() {
               Member.login({ email: $scope.newMember.email, password: $scope.newMember.password },
                 function() {
-                  flash.error = '';
+                  flash.clean();
                   $location.path('/');
                 }, function(httpResponse) {
                   flash.error = httpResponse.data.error.message;
@@ -139,6 +142,35 @@
           password: member.password
         };
       }
+    }
+  ]);
+
+  sg.app.controller('MyAccountController', ['$scope', '$location', 'flash', 'Member', 'State',
+    function($scope, $location, flash, Member, State) {
+      Member.getCurrent(
+        function(value, responseHeaders) {
+          $scope.member = value;
+        },
+        function(httpResponse) {
+          flash.error = httpResponse.data.error.message;
+        });
+
+      $scope.saveMember = function() {
+        if ($scope.member.password === '' || $scope.member.password === $scope.passwordConfirmation) {
+          $scope.member.$save().then(function() {
+            flash.clean();
+            flash.success = 'Member saved.';
+            $scope.passwordConfirmation = '';
+          }, function(err) {
+            flash.clean();
+            flash.error = err;
+          });
+        } else {
+          flash.error = 'Password and Password Confirmation must match.';
+        }
+      };
+
+      $scope.states = State.find();
     }
   ]);
 })(window.sg = window.sg || {});

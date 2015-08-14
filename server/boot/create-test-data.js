@@ -2,16 +2,30 @@ var async = require('async');
 module.exports = function(app) {
 	var mainDs = app.dataSources.mainDs
 
+  mainDs.autoupdate('Member', function(err) {
+    if (err) throw err;
+    app.models.Member.count(function(err, count) {
+      if (err) throw err;
+      if (count <= 0) {
+        createModels( function() {
+          console.log('> models created successfully');
+        });
+      }
+    });
+  });
+
 	//create all models
-	async.parallel({
-		groups: async.apply(createGroups),
-		members: async.apply(createMembers)
-	}, function(err, results){
-		if (err) throw err;
-    addMembersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
-    addLeadersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
-    console.log('> models created successfully');
-	});
+  function createModels(cb) {
+      async.parallel({
+        groups: async.apply(createGroups),
+        members: async.apply(createMembers)
+      }, function(err, results){
+        if (err) throw err;
+        addMembersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
+        addLeadersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
+        cb();
+      });
+  }
 
 	//create groups
 	function createGroups(cb) {
