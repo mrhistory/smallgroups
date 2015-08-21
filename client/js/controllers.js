@@ -1,6 +1,6 @@
 (function(sg) {
-  sg.app.controller('GroupController', [ '$scope', '$location', '$resource', '$routeParams', 'flash', 'Group', 'GroupService',
-    function($scope, $location, $resource, $routeParams, flash, Group, GroupService) {
+  sg.app.controller('GroupController', [ '$scope', '$location', '$routeParams', 'flash', 'Group', 'GroupService',
+    function($scope, $location, $routeParams, flash, Group, GroupService) {
       Group.findById({id: $routeParams.groupId},
         function(group) { 
           $scope.group = group;
@@ -22,6 +22,46 @@
   ]);
 
 
+  sg.app.controller('NewGroupController', [ '$scope', '$location', 'flash', 'Group', 'Member', 'GroupLeadership', 'GroupMembership',
+    function($scope, $location, flash, Group, Member, GroupLeadership, GroupMembership) {
+      $scope.findMembers = function(query) {
+        return Member.find({
+          filter: {
+            where: {
+              or: [
+                { email: { like: '%' + query + '%' } },
+                { firstName: { like: '%' + query + '%' } },
+                { lastName: { like: '%' + query + '%' } }
+              ]
+            }
+          }
+        }).$promise;
+      };
+
+      $scope.create = function() {
+        Group.create($scope.group, function(group) {
+          $scope.groupLeaders.forEach(function(groupLeader) {
+            GroupLeadership.create({ groupId: group.id, memberId: groupLeader.id }, function(){},
+              function(httpResponse) {
+                flash.error = httpResponse.data.error.message;
+              });
+          });
+          $scope.groupMembers.forEach(function(groupMember) {
+            GroupMembership.create({ groupId: group.id, memberId: groupMember.id }, function() {},
+              function(httpResponse) {
+                flash.error = httpResponse.data.error.message;
+              });
+          });
+        }, function(httpResponse) {
+          flash.error = httpResponse.data.error.message;
+        });
+      };
+
+      $scope.back = function() { $location.path('/groups'); };
+    }
+  ]);
+
+
   sg.app.controller('GroupsController', [ '$scope', '$resource', '$location', 'Group',
     function($scope, $resource, $location, Group) {
       Group.find({},
@@ -36,7 +76,8 @@
         function(httpResponse) { $scope.groups = null; }
       );
 
-      $scope.showGroup = function(groupId) { $location.path("/groups/" + groupId); };
+      $scope.showGroup = function(groupId) { $location.path('/groups/' + groupId); };
+      $scope.newGroup = function() { $location.path('/groups/new') };
     }
   ]);
 
