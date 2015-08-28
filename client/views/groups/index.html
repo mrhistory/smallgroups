@@ -1,5 +1,6 @@
 <div class="col-md-6 col-md-offset-3">
-  <h1>Groups</h1>
+  <fieldset>
+  <legend>Groups</legend>
     <div class="well" ng-repeat="group in groups">
       <div class="pull-right">
         <a href="#" class="btn btn-info btn-xs"> Edit </a>
@@ -9,11 +10,11 @@
         <h3>{{group.name}}</h3>
         <p>{{group.description}}</p>
         <p>
-          Max Members: {{group.maxSize}}
+          Max Size: {{group.maxSize}}
           <br>
           Openings: {{group.maxSize - group.currentSize}}
         </p>
       </div>
     </div>
-  <button class="btn btn-primary">New Group</button>
+  <button class="btn btn-primary" ng-click="newGroup()">New Group</button>
 </div>

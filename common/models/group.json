@@ -10,10 +10,6 @@
       "type": "string",
       "required": true
     },
-    "type": {
-      "type": "string",
-      "required": true
-    },
     "maxSize": {
       "type": "number"
     },
@@ -32,6 +28,11 @@
       "type": "hasMany",
       "model": "GroupLeadership",
       "foreignKey": ""
+    },
+    "groupTypes": {
+      "type": "hasMany",
+      "model": "GroupType",
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -44,7 +45,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {

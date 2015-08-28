@@ -4,7 +4,8 @@
     'ngResource',
     'angular-flash.service',
     'angular-flash.flash-alert-directive',
-    'lbServices'
+    'lbServices',
+    'ngTagsInput'
   ]);
 
   sg.app.config([ '$routeProvider', 'flashProvider', '$httpProvider',
@@ -48,6 +49,10 @@
         .when('/groups', {
           templateUrl: 'views/groups/index.html',
           controller: 'GroupsController'
+        })
+        .when('/groups/new', {
+          templateUrl: 'views/groups/new.html',
+          controller: 'NewGroupController'
         })
         .when('/groups/:groupId', {
           templateUrl: 'views/groups/show.html',

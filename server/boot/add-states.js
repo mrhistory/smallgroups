@@ -1,7 +1,7 @@
 module.exports = function(app) {
-  var mainDs = app.dataSources.mainDs
+  var db = app.dataSources.mainDs
   
-  mainDs.autoupdate('State', function(err) {
+  db.autoupdate('State', function(err) {
     if (err) throw err;
     app.models.State.count(function(err, count) {
       if (err) throw err;
@@ -16,7 +16,7 @@ module.exports = function(app) {
 
   // add states to database
   function addStates(cb) {
-    mainDs.automigrate('State', function(err) {
+    db.automigrate('State', function(err) {
       if (err) throw err;
       var State = app.models.State;
       State.create([

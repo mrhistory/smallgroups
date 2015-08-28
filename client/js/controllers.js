@@ -1,6 +1,6 @@
 (function(sg) {
-  sg.app.controller('GroupController', [ '$scope', '$location', '$resource', '$routeParams', 'flash', 'Group', 'GroupService',
-    function($scope, $location, $resource, $routeParams, flash, Group, GroupService) {
+  sg.app.controller('GroupController', [ '$scope', '$location', '$routeParams', 'flash', 'Group', 'GroupService',
+    function($scope, $location, $routeParams, flash, Group, GroupService) {
       Group.findById({id: $routeParams.groupId},
         function(group) { 
           $scope.group = group;
@@ -10,12 +10,44 @@
           GroupService.getGroupLeaders($scope.group.id, function(groupLeaderships) {
             $scope.group.groupLeaderships = groupLeaderships;
           });
+          GroupService.getGroupTypes($scope.group.id, function(groupTypes) {
+            $scope.group.groupTypes = groupTypes;
+          });
         },
         function(httpResponse) {
           $scope.group = null;
           flash.error = 'There is no group with ID ' + $routeParams.groupId;
         }
       );
+
+      $scope.back = function() { $location.path('/groups'); };
+    }
+  ]);
+
+
+  sg.app.controller('NewGroupController', [ '$scope', '$location', 'flash', 'GroupService', 'MemberService', 'TypeService',
+    function($scope, $location, flash, GroupService, MemberService, TypeService) {
+
+      $scope.findTypes = function(query) {
+        return TypeService.findTypes(query);
+      };
+
+      $scope.findMembers = function(query) {
+        return MemberService.findMembers(query);
+      };
+
+      $scope.create = function() {
+        GroupService.createGroup($scope.group, $scope.groupMembers, $scope.groupLeaders, $scope.groupTypes,
+          function(err) {
+            if (err) {
+              flash.error = err;
+            } else {
+              $location.path('/groups');
+              flash.success = $scope.group.name + ' saved';
+            }
+          }
+        );
+      };
 
       $scope.back = function() { $location.path('/groups'); };
     }
@@ -36,7 +68,8 @@
         function(httpResponse) { $scope.groups = null; }
       );
 
-      $scope.showGroup = function(groupId) { $location.path("/groups/" + groupId); };
+      $scope.showGroup = function(groupId) { $location.path('/groups/' + groupId); };
+      $scope.newGroup = function() { $location.path('/groups/new') };
     }
   ]);
 
