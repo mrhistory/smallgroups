@@ -4,36 +4,27 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="well">
           <form name="signUpForm" ng-submit="signup(newMember)">
-            <h2>Sign Up</h2>
-            <br>
-            <div class="form-group">
-              <label>First Name</label>
-              <br>
-              <input type="text" ng-model="newMember.firstName" autofocus="true" class="form-control" required="true">
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <br>
-              <input type="text" ng-model="newMember.lastName" class="form-control" required="true">
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <br>
-              <input type="email" ng-model="newMember.email" class="form-control" required="true">
-            </div>
-            <div class="form-group">
-              <label>Password</label>
-              <br>
-              <input type="password" ng-model="newMember.password" autocomplete="off" class="form-control" required="true">
-            </div>
-            <div class="form-group">
-              <label>Password Confirmation</label>
-              <br>
-              <input type="password" ng-model="newMember.passwordConfirmation" autocomplete="off" class="form-control" required="true">
-            </div>
-            <div class="actions">
-              <button type="submit" class="btn btn-primary"> Sign Up </button>
-            </div>
+            <filedset>
+              <legend>Sign Up</legend>
+              <div class="form-group">
+                <input type="text" ng-model="newMember.firstName" autofocus="true" class="form-control" required="true" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <input type="text" ng-model="newMember.lastName" class="form-control" required="true" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <input type="email" ng-model="newMember.email" class="form-control" required="true" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="password" ng-model="newMember.password" autocomplete="off" class="form-control" required="true" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <input type="password" ng-model="newMember.passwordConfirmation" autocomplete="off" class="form-control" required="true" placeholder="Password Confirmation">
+              </div>
+              <div class="actions">
+                <button type="submit" class="btn btn-primary"> Sign Up </button>
+              </div>
+            </filedset>
           </form>
         </div>
       </div>
