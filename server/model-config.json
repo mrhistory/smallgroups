@@ -58,5 +58,17 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "Type": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "GroupType": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

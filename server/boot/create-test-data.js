@@ -1,8 +1,8 @@
 var async = require('async');
 module.exports = function(app) {
-	var mainDs = app.dataSources.mainDs
+	var db = app.dataSources.mainDs
 
-  mainDs.autoupdate('Member', function(err) {
+  db.autoupdate('Member', function(err) {
     if (err) throw err;
     app.models.Member.count(function(err, count) {
       if (err) throw err;
@@ -23,26 +23,32 @@ module.exports = function(app) {
         if (err) throw err;
         addMembersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
         addLeadersToGroups(results.groups, results.members, function(err) { if (err) throw err; });
-        cb();
+        createTypes(function(err, types) {
+          if (err) throw err;
+          addTypesToGroups(function(err) {
+            if (err) throw err;
+            cb();
+          });
+        });
       });
   }
 
 	//create groups
 	function createGroups(cb) {
-		mainDs.automigrate('Group', function(err) {
+		db.automigrate('Group', function(err) {
 			if (err) return cb(err);
 			var Group = app.models.Group;
 			Group.create([
-				{name: "Commander's Group", type: 'any', description: "Small group for commanders in Starfleet.", maxSize: 5},
-				{name: "The Original Series Group", type: 'any', description: "Small group for Star Trek: The Original Series.", maxSize: 3},
-				{name: "Next Generation Group", type: 'any', description: "Small group for Star Trek: Next Generation.", maxSize: 3}
+				{name: "Commander's Group", description: "Small group for commanders in Starfleet.", maxSize: 5},
+				{name: "The Original Series Group", description: "Small group for Star Trek: The Original Series.", maxSize: 3},
+				{name: "Next Generation Group", description: "Small group for Star Trek: Next Generation.", maxSize: 3}
 			], cb);
 		});
 	}
 
 	//create members
 	function createMembers(cb) {
-		mainDs.automigrate('Member', function(err) {
+		db.automigrate('Member', function(err) {
 			if (err) return cb(err);
 			var Member = app.models.Member;
 			Member.create([
@@ -56,9 +62,23 @@ module.exports = function(app) {
 		});
 	}
 
+  function createTypes(cb) {
+    db.automigrate('Type', function(err) {
+      if (err) return cb(err);
+      var Type = app.models.Type;
+      Type.create([
+        {name: 'any'},
+        {name: 'men'},
+        {name: 'women'},
+        {name: 'community'},
+        {name: 'discipleship'}
+      ], cb);
+    });
+  }
+
 	//add members to groups
 	function addMembersToGroups(groups, members, cb) {
-		mainDs.automigrate('GroupMembership', function(err) {
+		db.automigrate('GroupMembership', function(err) {
       if (err) return cb(err);
       var GroupMembership = app.models.GroupMembership;
       GroupMembership.create([
@@ -76,7 +96,7 @@ module.exports = function(app) {
 	}
 
   function addLeadersToGroups(groups, members, cb) {
-    mainDs.automigrate('GroupLeadership', function(err) {
+    db.automigrate('GroupLeadership', function(err) {
       if (err) return cb(err);
       var GroupLeadership = app.models.GroupLeadership;
       GroupLeadership.create([
@@ -88,8 +108,26 @@ module.exports = function(app) {
     });
   }
 
+  function addTypesToGroups(cb) {
+    db.automigrate('GroupType', function(err) {
+      if (err) return cb(err);
+      var Group = app.models.Group;
+      var GroupType = app.models.GroupType;
+      var Type = app.models.Type;
+      Group.find({}, function(err, groups) {
+        groups.forEach(function(group) {
+          Type.find({where: {name: 'men'}, limit: 1}, function(err, type) {
+            if (err) return cb(err);
+            GroupType.create([{group: group, type: type[0]}]);
+          });
+        });
+        cb();
+      });
+    });
+  }
+
 	function createPrayerRequests(members, cb) {
-		mainDs.automigrate('PrayerRequest', function(err) {
+		db.automigrate('PrayerRequest', function(err) {
 			if (err) cb(err);
 			var PrayerRequest = app.models.PrayerRequest;
 			PrayerRequest.create([

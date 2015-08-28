@@ -10,9 +10,10 @@
     <div ng-app="smallGroups">
       <div class="view-container">
         <div ng-include="'views/partials/navbar.html'"></div>
-        <div class="flash row">
-          <div class="col-md-6 col-md-offset-3" flash-alert duration="0" active-class="alert">
-            {{ flash.message }}
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 flash fade" flash-alert active-class="in alert">
+            <span class="alert-message">{{flash.message}}</span>
+            <button type="button" class="close" ng-click="hide()">&times;</button>
           </div>
         </div>
         <div class="view-frame" ng-view="true"></div>

@@ -1,5 +1,5 @@
 {
-  "name": "GroupMembership",
+  "name": "GroupType",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -14,9 +14,9 @@
       "model": "Group",
       "foreignKey": ""
     },
-    "member": {
+    "type": {
       "type": "belongsTo",
-      "model": "Member",
+      "model": "Type",
       "foreignKey": ""
     }
   },

@@ -2,7 +2,7 @@
   <fieldset>
   <legend>New Group</legend>
   <form name="newGroupForm" ng-submit="create()">
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class="form-group">
         <input type="text" ng-model="group.name" class="form-control" autofocus="true" placeholder="Group Name" required="true"></input>
       </div>
@@ -10,15 +10,26 @@
         <textarea rows="5" ng-model="group.description" class="form-control" placeholder="Group Description" required="true"></textarea>
       </div>
       <div class="form-group">
-        <input type="number" ng-model="group.maxMembers" class="form-control" placeholder="Max Members" required="true"></input>
+        <input type="number" ng-model="group.maxSize" class="form-control" placeholder="Max Size" required="true"></input>
+      </div>
+      <div class="form-group">
+        <tags-input ng-model="groupTypes"
+                    display-property="name"
+                    placeholder= "Add a group type"
+                    replace-spaces-with-dashes="false"
+                    add-from-autocomplete-only="false"
+                    required="true">
+          <auto-complete source="findTypes($query)"
+                          min-length="1"
+                          debouce-delay="0"
+                          max-results-to-show="10"></auto-complete>
+        </tags-input>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="form-group">
-        <label>Group Leaders</label>
-        <br>
         <tags-input ng-model="groupLeaders"
-                    display-property="fullName"
+                    display-property="fullNameAndEmail"
                     placeholder= "Add a group leader"
                     replace-spaces-with-dashes="false"
                     add-from-autocomplete-only="true"
@@ -30,10 +41,8 @@
         </tags-input>
       </div>
       <div class="form-group">
-        <label>Group Members</label>
-        <br>
         <tags-input ng-model="groupMembers"
-                    display-property="fullName"
+                    display-property="fullNameAndEmail"
                     placeholder= "Add a group member"
                     replace-spaces-with-dashes="false"
                     add-from-autocomplete-only="true">

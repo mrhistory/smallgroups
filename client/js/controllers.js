@@ -10,6 +10,9 @@
           GroupService.getGroupLeaders($scope.group.id, function(groupLeaderships) {
             $scope.group.groupLeaderships = groupLeaderships;
           });
+          GroupService.getGroupTypes($scope.group.id, function(groupTypes) {
+            $scope.group.groupTypes = groupTypes;
+          });
         },
         function(httpResponse) {
           $scope.group = null;
@@ -22,39 +25,28 @@
   ]);
 
 
-  sg.app.controller('NewGroupController', [ '$scope', '$location', 'flash', 'Group', 'Member', 'GroupLeadership', 'GroupMembership',
-    function($scope, $location, flash, Group, Member, GroupLeadership, GroupMembership) {
+  sg.app.controller('NewGroupController', [ '$scope', '$location', 'flash', 'GroupService', 'MemberService', 'TypeService',
+    function($scope, $location, flash, GroupService, MemberService, TypeService) {
+
+      $scope.findTypes = function(query) {
+        return TypeService.findTypes(query);
+      };
+
       $scope.findMembers = function(query) {
-        return Member.find({
-          filter: {
-            where: {
-              or: [
-                { email: { like: '%' + query + '%' } },
-                { firstName: { like: '%' + query + '%' } },
-                { lastName: { like: '%' + query + '%' } }
-              ]
-            }
-          }
-        }).$promise;
+        return MemberService.findMembers(query);
       };
 
       $scope.create = function() {
-        Group.create($scope.group, function(group) {
-          $scope.groupLeaders.forEach(function(groupLeader) {
-            GroupLeadership.create({ groupId: group.id, memberId: groupLeader.id }, function(){},
-              function(httpResponse) {
-                flash.error = httpResponse.data.error.message;
-              });
-          });
-          $scope.groupMembers.forEach(function(groupMember) {
-            GroupMembership.create({ groupId: group.id, memberId: groupMember.id }, function() {},
-              function(httpResponse) {
-                flash.error = httpResponse.data.error.message;
-              });
-          });
-        }, function(httpResponse) {
-          flash.error = httpResponse.data.error.message;
-        });
+        GroupService.createGroup($scope.group, $scope.groupMembers, $scope.groupLeaders, $scope.groupTypes,
+          function(err) {
+            if (err) {
+              flash.error = err;
+            } else {
+              $location.path('/groups');
+              flash.success = $scope.group.name + ' saved';
+            }
+          }
+        );
       };
 
       $scope.back = function() { $location.path('/groups'); };
