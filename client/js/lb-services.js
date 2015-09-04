@@ -155,57 +155,57 @@ module.factory(
           method: "PUT"
         },
 
-        // INTERNAL. Use Member.groupMemberships.findById() instead.
-        "prototype$__findById__groupMemberships": {
+        // INTERNAL. Use Member.groupMembers.findById() instead.
+        "prototype$__findById__groupMembers": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
+          url: urlBase + "/Members/:id/groupMembers/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupMemberships.destroyById() instead.
-        "prototype$__destroyById__groupMemberships": {
+        // INTERNAL. Use Member.groupMembers.destroyById() instead.
+        "prototype$__destroyById__groupMembers": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
+          url: urlBase + "/Members/:id/groupMembers/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Member.groupMemberships.updateById() instead.
-        "prototype$__updateById__groupMemberships": {
+        // INTERNAL. Use Member.groupMembers.updateById() instead.
+        "prototype$__updateById__groupMembers": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
+          url: urlBase + "/Members/:id/groupMembers/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.findById() instead.
-        "prototype$__findById__groupLeaderships": {
+        // INTERNAL. Use Member.groupLeaders.findById() instead.
+        "prototype$__findById__groupLeaders": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.destroyById() instead.
-        "prototype$__destroyById__groupLeaderships": {
+        // INTERNAL. Use Member.groupLeaders.destroyById() instead.
+        "prototype$__destroyById__groupLeaders": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.updateById() instead.
-        "prototype$__updateById__groupLeaderships": {
+        // INTERNAL. Use Member.groupLeaders.updateById() instead.
+        "prototype$__updateById__groupLeaders": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
           method: "PUT"
         },
 
@@ -346,53 +346,53 @@ module.factory(
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupMemberships() instead.
-        "prototype$__get__groupMemberships": {
+        // INTERNAL. Use Member.groupMembers() instead.
+        "prototype$__get__groupMembers": {
           isArray: true,
-          url: urlBase + "/Members/:id/groupMemberships",
+          url: urlBase + "/Members/:id/groupMembers",
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupMemberships.create() instead.
-        "prototype$__create__groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships",
+        // INTERNAL. Use Member.groupMembers.create() instead.
+        "prototype$__create__groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers",
           method: "POST"
         },
 
-        // INTERNAL. Use Member.groupMemberships.destroyAll() instead.
-        "prototype$__delete__groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships",
+        // INTERNAL. Use Member.groupMembers.destroyAll() instead.
+        "prototype$__delete__groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Member.groupMemberships.count() instead.
-        "prototype$__count__groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships/count",
+        // INTERNAL. Use Member.groupMembers.count() instead.
+        "prototype$__count__groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers/count",
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupLeaderships() instead.
-        "prototype$__get__groupLeaderships": {
+        // INTERNAL. Use Member.groupLeaders() instead.
+        "prototype$__get__groupLeaders": {
           isArray: true,
-          url: urlBase + "/Members/:id/groupLeaderships",
+          url: urlBase + "/Members/:id/groupLeaders",
           method: "GET"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.create() instead.
-        "prototype$__create__groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships",
+        // INTERNAL. Use Member.groupLeaders.create() instead.
+        "prototype$__create__groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders",
           method: "POST"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.destroyAll() instead.
-        "prototype$__delete__groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships",
+        // INTERNAL. Use Member.groupLeaders.destroyAll() instead.
+        "prototype$__delete__groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Member.groupLeaderships.count() instead.
-        "prototype$__count__groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships/count",
+        // INTERNAL. Use Member.groupLeaders.count() instead.
+        "prototype$__count__groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders/count",
           method: "GET"
         },
 
@@ -988,15 +988,15 @@ module.factory(
           method: "GET"
         },
 
-        // INTERNAL. Use GroupMembership.member() instead.
-        "::get::GroupMembership::member": {
-          url: urlBase + "/GroupMemberships/:id/member",
+        // INTERNAL. Use GroupMember.member() instead.
+        "::get::GroupMember::member": {
+          url: urlBase + "/GroupMembers/:id/member",
           method: "GET"
         },
 
-        // INTERNAL. Use GroupLeadership.member() instead.
-        "::get::GroupLeadership::member": {
-          url: urlBase + "/GroupLeaderships/:id/member",
+        // INTERNAL. Use GroupLeader.member() instead.
+        "::get::GroupLeader::member": {
+          url: urlBase + "/GroupLeaders/:id/member",
           method: "GET"
         },
 
@@ -1217,27 +1217,27 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbServices.Member.groupMemberships
-     * @header lbServices.Member.groupMemberships
+     * @name lbServices.Member.groupMembers
+     * @header lbServices.Member.groupMembers
      * @object
      * @description
      *
-     * The object `Member.groupMemberships` groups methods
-     * manipulating `GroupMembership` instances related to `Member`.
+     * The object `Member.groupMembers` groups methods
+     * manipulating `GroupMember` instances related to `Member`.
      *
-     * Call {@link lbServices.Member#groupMemberships Member.groupMemberships()}
+     * Call {@link lbServices.Member#groupMembers Member.groupMembers()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbServices.Member#groupMemberships
+         * @name lbServices.Member#groupMembers
          * @methodOf lbServices.Member
          *
          * @description
          *
-         * Queries groupMemberships of Member.
+         * Queries groupMembers of Member.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1257,23 +1257,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
+         * This usually means the response is a `GroupMember` object.)
          * </em>
          */
-        R.groupMemberships = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::get::Member::groupMemberships"];
+        R.groupMembers = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::get::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#count
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#count
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Counts groupMemberships of Member.
+         * Counts groupMembers of Member.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1295,20 +1295,20 @@ module.factory(
          *
          *  - `count` – `{number=}` - 
          */
-        R.groupMemberships.count = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::count::Member::groupMemberships"];
+        R.groupMembers.count = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::count::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#create
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#create
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Creates a new instance in groupMemberships of this model.
+         * Creates a new instance in groupMembers of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1330,23 +1330,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
+         * This usually means the response is a `GroupMember` object.)
          * </em>
          */
-        R.groupMemberships.create = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::create::Member::groupMemberships"];
+        R.groupMembers.create = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::create::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#createMany
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#createMany
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Creates a new instance in groupMemberships of this model.
+         * Creates a new instance in groupMembers of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1368,23 +1368,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
+         * This usually means the response is a `GroupMember` object.)
          * </em>
          */
-        R.groupMemberships.createMany = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::createMany::Member::groupMemberships"];
+        R.groupMembers.createMany = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::createMany::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#destroyAll
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#destroyAll
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Deletes all groupMemberships of this model.
+         * Deletes all groupMembers of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1402,26 +1402,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.groupMemberships.destroyAll = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::delete::Member::groupMemberships"];
+        R.groupMembers.destroyAll = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::delete::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#destroyById
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#destroyById
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Delete a related item by id for groupMemberships.
+         * Delete a related item by id for groupMembers.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
+         *  - `fk` – `{*}` - Foreign key for groupMembers
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -1435,26 +1435,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.groupMemberships.destroyById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::destroyById::Member::groupMemberships"];
+        R.groupMembers.destroyById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::destroyById::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#findById
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#findById
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Find a related item by id for groupMemberships.
+         * Find a related item by id for groupMembers.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
+         *  - `fk` – `{*}` - Foreign key for groupMembers
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -1468,29 +1468,29 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
+         * This usually means the response is a `GroupMember` object.)
          * </em>
          */
-        R.groupMemberships.findById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::findById::Member::groupMemberships"];
+        R.groupMembers.findById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::findById::Member::groupMembers"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupMemberships#updateById
-         * @methodOf lbServices.Member.groupMemberships
+         * @name lbServices.Member.groupMembers#updateById
+         * @methodOf lbServices.Member.groupMembers
          *
          * @description
          *
-         * Update a related item by id for groupMemberships.
+         * Update a related item by id for groupMembers.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
+         *  - `fk` – `{*}` - Foreign key for groupMembers
          *
          * @param {Object} postData Request data.
          *
@@ -1508,37 +1508,37 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
+         * This usually means the response is a `GroupMember` object.)
          * </em>
          */
-        R.groupMemberships.updateById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::updateById::Member::groupMemberships"];
+        R.groupMembers.updateById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::updateById::Member::groupMembers"];
           return action.apply(R, arguments);
         };
     /**
      * @ngdoc object
-     * @name lbServices.Member.groupLeaderships
-     * @header lbServices.Member.groupLeaderships
+     * @name lbServices.Member.groupLeaders
+     * @header lbServices.Member.groupLeaders
      * @object
      * @description
      *
-     * The object `Member.groupLeaderships` groups methods
-     * manipulating `GroupLeadership` instances related to `Member`.
+     * The object `Member.groupLeaders` groups methods
+     * manipulating `GroupLeader` instances related to `Member`.
      *
-     * Call {@link lbServices.Member#groupLeaderships Member.groupLeaderships()}
+     * Call {@link lbServices.Member#groupLeaders Member.groupLeaders()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbServices.Member#groupLeaderships
+         * @name lbServices.Member#groupLeaders
          * @methodOf lbServices.Member
          *
          * @description
          *
-         * Queries groupLeaderships of Member.
+         * Queries groupLeaders of Member.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1558,23 +1558,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
+         * This usually means the response is a `GroupLeader` object.)
          * </em>
          */
-        R.groupLeaderships = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::get::Member::groupLeaderships"];
+        R.groupLeaders = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::get::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#count
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#count
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Counts groupLeaderships of Member.
+         * Counts groupLeaders of Member.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1596,20 +1596,20 @@ module.factory(
          *
          *  - `count` – `{number=}` - 
          */
-        R.groupLeaderships.count = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::count::Member::groupLeaderships"];
+        R.groupLeaders.count = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::count::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#create
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#create
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Creates a new instance in groupLeaderships of this model.
+         * Creates a new instance in groupLeaders of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1631,23 +1631,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
+         * This usually means the response is a `GroupLeader` object.)
          * </em>
          */
-        R.groupLeaderships.create = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::create::Member::groupLeaderships"];
+        R.groupLeaders.create = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::create::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#createMany
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#createMany
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Creates a new instance in groupLeaderships of this model.
+         * Creates a new instance in groupLeaders of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1669,23 +1669,23 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
+         * This usually means the response is a `GroupLeader` object.)
          * </em>
          */
-        R.groupLeaderships.createMany = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::createMany::Member::groupLeaderships"];
+        R.groupLeaders.createMany = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::createMany::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#destroyAll
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#destroyAll
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Deletes all groupLeaderships of this model.
+         * Deletes all groupLeaders of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -1703,26 +1703,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.groupLeaderships.destroyAll = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::delete::Member::groupLeaderships"];
+        R.groupLeaders.destroyAll = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::delete::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#destroyById
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#destroyById
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Delete a related item by id for groupLeaderships.
+         * Delete a related item by id for groupLeaders.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -1736,26 +1736,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.groupLeaderships.destroyById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::destroyById::Member::groupLeaderships"];
+        R.groupLeaders.destroyById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::destroyById::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#findById
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#findById
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Find a related item by id for groupLeaderships.
+         * Find a related item by id for groupLeaders.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -1769,29 +1769,29 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
+         * This usually means the response is a `GroupLeader` object.)
          * </em>
          */
-        R.groupLeaderships.findById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::findById::Member::groupLeaderships"];
+        R.groupLeaders.findById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::findById::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Member.groupLeaderships#updateById
-         * @methodOf lbServices.Member.groupLeaderships
+         * @name lbServices.Member.groupLeaders#updateById
+         * @methodOf lbServices.Member.groupLeaders
          *
          * @description
          *
-         * Update a related item by id for groupLeaderships.
+         * Update a related item by id for groupLeaders.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - User id
          *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
          *
          * @param {Object} postData Request data.
          *
@@ -1809,12 +1809,12 @@ module.factory(
          *
          * <em>
          * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
+         * This usually means the response is a `GroupLeader` object.)
          * </em>
          */
-        R.groupLeaderships.updateById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::updateById::Member::groupLeaderships"];
+        R.groupLeaders.updateById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::updateById::Member::groupLeaders"];
           return action.apply(R, arguments);
         };
 
@@ -1846,60 +1846,6 @@ module.factory(
       { 'id': '@id' },
       {
 
-        // INTERNAL. Use Group.groupMemberships.findById() instead.
-        "prototype$__findById__groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.destroyById() instead.
-        "prototype$__destroyById__groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.updateById() instead.
-        "prototype$__updateById__groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.findById() instead.
-        "prototype$__findById__groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.destroyById() instead.
-        "prototype$__destroyById__groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.updateById() instead.
-        "prototype$__updateById__groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "PUT"
-        },
-
         // INTERNAL. Use Group.groupTypes.findById() instead.
         "prototype$__findById__groupTypes": {
           params: {
@@ -1927,54 +1873,58 @@ module.factory(
           method: "PUT"
         },
 
-        // INTERNAL. Use Group.groupMemberships() instead.
-        "prototype$__get__groupMemberships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupMemberships",
+        // INTERNAL. Use Group.groupMembers.findById() instead.
+        "prototype$__findById__groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Group.groupMemberships.create() instead.
-        "prototype$__create__groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.destroyAll() instead.
-        "prototype$__delete__groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships",
+        // INTERNAL. Use Group.groupMembers.destroyById() instead.
+        "prototype$__destroyById__groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Group.groupMemberships.count() instead.
-        "prototype$__count__groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships/count",
+        // INTERNAL. Use Group.groupMembers.updateById() instead.
+        "prototype$__updateById__groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.findById() instead.
+        "prototype$__findById__groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Group.groupLeaderships() instead.
-        "prototype$__get__groupLeaderships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.create() instead.
-        "prototype$__create__groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.destroyAll() instead.
-        "prototype$__delete__groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships",
+        // INTERNAL. Use Group.groupLeaders.destroyById() instead.
+        "prototype$__destroyById__groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Group.groupLeaderships.count() instead.
-        "prototype$__count__groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships/count",
-          method: "GET"
+        // INTERNAL. Use Group.groupLeaders.updateById() instead.
+        "prototype$__updateById__groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
+          method: "PUT"
         },
 
         // INTERNAL. Use Group.groupTypes() instead.
@@ -1999,6 +1949,56 @@ module.factory(
         // INTERNAL. Use Group.groupTypes.count() instead.
         "prototype$__count__groupTypes": {
           url: urlBase + "/Groups/:id/groupTypes/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupMembers() instead.
+        "prototype$__get__groupMembers": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupMembers.create() instead.
+        "prototype$__create__groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupMembers.destroyAll() instead.
+        "prototype$__delete__groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupMembers.count() instead.
+        "prototype$__count__groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupLeaders() instead.
+        "prototype$__get__groupLeaders": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.create() instead.
+        "prototype$__create__groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.destroyAll() instead.
+        "prototype$__delete__groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.count() instead.
+        "prototype$__count__groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders/count",
           method: "GET"
         },
 
@@ -2421,21 +2421,21 @@ module.factory(
           method: "POST"
         },
 
-        // INTERNAL. Use GroupMembership.group() instead.
-        "::get::GroupMembership::group": {
-          url: urlBase + "/GroupMemberships/:id/group",
-          method: "GET"
-        },
-
-        // INTERNAL. Use GroupLeadership.group() instead.
-        "::get::GroupLeadership::group": {
-          url: urlBase + "/GroupLeaderships/:id/group",
-          method: "GET"
-        },
-
         // INTERNAL. Use GroupType.group() instead.
         "::get::GroupType::group": {
           url: urlBase + "/GroupTypes/:id/group",
+          method: "GET"
+        },
+
+        // INTERNAL. Use GroupMember.group() instead.
+        "::get::GroupMember::group": {
+          url: urlBase + "/GroupMembers/:id/group",
+          method: "GET"
+        },
+
+        // INTERNAL. Use GroupLeader.group() instead.
+        "::get::GroupLeader::group": {
+          url: urlBase + "/GroupLeaders/:id/group",
           method: "GET"
         },
       }
@@ -2574,608 +2574,6 @@ module.factory(
     */
     R.modelName = "Group";
 
-    /**
-     * @ngdoc object
-     * @name lbServices.Group.groupMemberships
-     * @header lbServices.Group.groupMemberships
-     * @object
-     * @description
-     *
-     * The object `Group.groupMemberships` groups methods
-     * manipulating `GroupMembership` instances related to `Group`.
-     *
-     * Call {@link lbServices.Group#groupMemberships Group.groupMemberships()}
-     * to query all related instances.
-     */
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group#groupMemberships
-         * @methodOf lbServices.Group
-         *
-         * @description
-         *
-         * Queries groupMemberships of Group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `filter` – `{object=}` - 
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R.groupMemberships = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::get::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#count
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Counts groupMemberships of Group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` - 
-         */
-        R.groupMemberships.count = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::count::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#create
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Creates a new instance in groupMemberships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R.groupMemberships.create = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::create::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#createMany
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Creates a new instance in groupMemberships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R.groupMemberships.createMany = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::createMany::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#destroyAll
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Deletes all groupMemberships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R.groupMemberships.destroyAll = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::delete::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#destroyById
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Delete a related item by id for groupMemberships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R.groupMemberships.destroyById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::destroyById::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#findById
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Find a related item by id for groupMemberships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R.groupMemberships.findById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::findById::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupMemberships#updateById
-         * @methodOf lbServices.Group.groupMemberships
-         *
-         * @description
-         *
-         * Update a related item by id for groupMemberships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupMemberships
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R.groupMemberships.updateById = function() {
-          var TargetResource = $injector.get("GroupMembership");
-          var action = TargetResource["::updateById::Group::groupMemberships"];
-          return action.apply(R, arguments);
-        };
-    /**
-     * @ngdoc object
-     * @name lbServices.Group.groupLeaderships
-     * @header lbServices.Group.groupLeaderships
-     * @object
-     * @description
-     *
-     * The object `Group.groupLeaderships` groups methods
-     * manipulating `GroupLeadership` instances related to `Group`.
-     *
-     * Call {@link lbServices.Group#groupLeaderships Group.groupLeaderships()}
-     * to query all related instances.
-     */
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group#groupLeaderships
-         * @methodOf lbServices.Group
-         *
-         * @description
-         *
-         * Queries groupLeaderships of Group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `filter` – `{object=}` - 
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R.groupLeaderships = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::get::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#count
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Counts groupLeaderships of Group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` - 
-         */
-        R.groupLeaderships.count = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::count::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#create
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Creates a new instance in groupLeaderships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R.groupLeaderships.create = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::create::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#createMany
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Creates a new instance in groupLeaderships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R.groupLeaderships.createMany = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::createMany::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#destroyAll
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Deletes all groupLeaderships of this model.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R.groupLeaderships.destroyAll = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::delete::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#destroyById
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Delete a related item by id for groupLeaderships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R.groupLeaderships.destroyById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::destroyById::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#findById
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Find a related item by id for groupLeaderships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R.groupLeaderships.findById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::findById::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Group.groupLeaderships#updateById
-         * @methodOf lbServices.Group.groupLeaderships
-         *
-         * @description
-         *
-         * Update a related item by id for groupLeaderships.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for groupLeaderships
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R.groupLeaderships.updateById = function() {
-          var TargetResource = $injector.get("GroupLeadership");
-          var action = TargetResource["::updateById::Group::groupLeaderships"];
-          return action.apply(R, arguments);
-        };
     /**
      * @ngdoc object
      * @name lbServices.Group.groupTypes
@@ -3475,6 +2873,608 @@ module.factory(
         R.groupTypes.updateById = function() {
           var TargetResource = $injector.get("GroupType");
           var action = TargetResource["::updateById::Group::groupTypes"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Group.groupMembers
+     * @header lbServices.Group.groupMembers
+     * @object
+     * @description
+     *
+     * The object `Group.groupMembers` groups methods
+     * manipulating `GroupMember` instances related to `Group`.
+     *
+     * Call {@link lbServices.Group#groupMembers Group.groupMembers()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group#groupMembers
+         * @methodOf lbServices.Group
+         *
+         * @description
+         *
+         * Queries groupMembers of Group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R.groupMembers = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::get::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#count
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Counts groupMembers of Group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.groupMembers.count = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::count::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#create
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Creates a new instance in groupMembers of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R.groupMembers.create = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::create::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#createMany
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Creates a new instance in groupMembers of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R.groupMembers.createMany = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::createMany::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#destroyAll
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Deletes all groupMembers of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.groupMembers.destroyAll = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::delete::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#destroyById
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Delete a related item by id for groupMembers.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupMembers
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.groupMembers.destroyById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::destroyById::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#findById
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Find a related item by id for groupMembers.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupMembers
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R.groupMembers.findById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::findById::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupMembers#updateById
+         * @methodOf lbServices.Group.groupMembers
+         *
+         * @description
+         *
+         * Update a related item by id for groupMembers.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupMembers
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R.groupMembers.updateById = function() {
+          var TargetResource = $injector.get("GroupMember");
+          var action = TargetResource["::updateById::Group::groupMembers"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Group.groupLeaders
+     * @header lbServices.Group.groupLeaders
+     * @object
+     * @description
+     *
+     * The object `Group.groupLeaders` groups methods
+     * manipulating `GroupLeader` instances related to `Group`.
+     *
+     * Call {@link lbServices.Group#groupLeaders Group.groupLeaders()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group#groupLeaders
+         * @methodOf lbServices.Group
+         *
+         * @description
+         *
+         * Queries groupLeaders of Group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R.groupLeaders = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::get::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#count
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Counts groupLeaders of Group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.groupLeaders.count = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::count::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#create
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Creates a new instance in groupLeaders of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R.groupLeaders.create = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::create::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#createMany
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Creates a new instance in groupLeaders of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R.groupLeaders.createMany = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::createMany::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#destroyAll
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Deletes all groupLeaders of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.groupLeaders.destroyAll = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::delete::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#destroyById
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Delete a related item by id for groupLeaders.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.groupLeaders.destroyById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::destroyById::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#findById
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Find a related item by id for groupLeaders.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R.groupLeaders.findById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::findById::Group::groupLeaders"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.groupLeaders#updateById
+         * @methodOf lbServices.Group.groupLeaders
+         *
+         * @description
+         *
+         * Update a related item by id for groupLeaders.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for groupLeaders
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R.groupLeaders.updateById = function() {
+          var TargetResource = $injector.get("GroupLeader");
+          var action = TargetResource["::updateById::Group::groupLeaders"];
           return action.apply(R, arguments);
         };
 
@@ -4100,1576 +4100,6 @@ module.factory(
         R.member = function() {
           var TargetResource = $injector.get("Member");
           var action = TargetResource["::get::PrayerRequest::member"];
-          return action.apply(R, arguments);
-        };
-
-    return R;
-  }]);
-
-/**
- * @ngdoc object
- * @name lbServices.GroupMembership
- * @header lbServices.GroupMembership
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `GroupMembership` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-module.factory(
-  "GroupMembership",
-  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
-    var R = Resource(
-      urlBase + "/GroupMemberships/:id",
-      { 'id': '@id' },
-      {
-
-        // INTERNAL. Use GroupMembership.group() instead.
-        "prototype$__get__group": {
-          url: urlBase + "/GroupMemberships/:id/group",
-          method: "GET"
-        },
-
-        // INTERNAL. Use GroupMembership.member() instead.
-        "prototype$__get__member": {
-          url: urlBase + "/GroupMemberships/:id/member",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#create
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Create a new instance of the model and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "create": {
-          url: urlBase + "/GroupMemberships",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#createMany
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Create a new instance of the model and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "createMany": {
-          isArray: true,
-          url: urlBase + "/GroupMemberships",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#upsert
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Update an existing model instance or insert a new one into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "upsert": {
-          url: urlBase + "/GroupMemberships",
-          method: "PUT"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#exists
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Check whether a model instance exists in the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `exists` – `{boolean=}` - 
-         */
-        "exists": {
-          url: urlBase + "/GroupMemberships/:id/exists",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#findById
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Find a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         *  - `filter` – `{object=}` - Filter defining fields and include
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "findById": {
-          url: urlBase + "/GroupMemberships/:id",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#find
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Find all instances of the model matched by filter from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "find": {
-          isArray: true,
-          url: urlBase + "/GroupMemberships",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#findOne
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Find first instance of the model matched by filter from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "findOne": {
-          url: urlBase + "/GroupMemberships/findOne",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#updateAll
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Update instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        "updateAll": {
-          url: urlBase + "/GroupMemberships/update",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#deleteById
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        "deleteById": {
-          url: urlBase + "/GroupMemberships/:id",
-          method: "DELETE"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#count
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Count instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` - 
-         */
-        "count": {
-          url: urlBase + "/GroupMemberships/count",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#prototype$updateAttributes
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Update attributes for a model instance and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        "prototype$updateAttributes": {
-          url: urlBase + "/GroupMemberships/:id",
-          method: "PUT"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#createChangeStream
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Create a change stream.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         *  - `options` – `{object=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `changes` – `{ReadableStream=}` - 
-         */
-        "createChangeStream": {
-          url: urlBase + "/GroupMemberships/change-stream",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.findById() instead.
-        "::findById::Member::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.destroyById() instead.
-        "::destroyById::Member::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.updateById() instead.
-        "::updateById::Member::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupMemberships/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Member.groupMemberships() instead.
-        "::get::Member::groupMemberships": {
-          isArray: true,
-          url: urlBase + "/Members/:id/groupMemberships",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.create() instead.
-        "::create::Member::groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.createMany() instead.
-        "::createMany::Member::groupMemberships": {
-          isArray: true,
-          url: urlBase + "/Members/:id/groupMemberships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.destroyAll() instead.
-        "::delete::Member::groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Member.groupMemberships.count() instead.
-        "::count::Member::groupMemberships": {
-          url: urlBase + "/Members/:id/groupMemberships/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.findById() instead.
-        "::findById::Group::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.destroyById() instead.
-        "::destroyById::Group::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.updateById() instead.
-        "::updateById::Group::groupMemberships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupMemberships/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Group.groupMemberships() instead.
-        "::get::Group::groupMemberships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupMemberships",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.create() instead.
-        "::create::Group::groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.createMany() instead.
-        "::createMany::Group::groupMemberships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupMemberships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.destroyAll() instead.
-        "::delete::Group::groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupMemberships.count() instead.
-        "::count::Group::groupMemberships": {
-          url: urlBase + "/Groups/:id/groupMemberships/count",
-          method: "GET"
-        },
-      }
-    );
-
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#updateOrCreate
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Update an existing model instance or insert a new one into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupMembership` object.)
-         * </em>
-         */
-        R["updateOrCreate"] = R["upsert"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#update
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Update instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["update"] = R["updateAll"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#destroyById
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["destroyById"] = R["deleteById"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#removeById
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["removeById"] = R["deleteById"];
-
-
-    /**
-    * @ngdoc property
-    * @name lbServices.GroupMembership#modelName
-    * @propertyOf lbServices.GroupMembership
-    * @description
-    * The name of the model represented by this $resource,
-    * i.e. `GroupMembership`.
-    */
-    R.modelName = "GroupMembership";
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#group
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Fetches belongsTo relation group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `refresh` – `{boolean=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Group` object.)
-         * </em>
-         */
-        R.group = function() {
-          var TargetResource = $injector.get("Group");
-          var action = TargetResource["::get::GroupMembership::group"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupMembership#member
-         * @methodOf lbServices.GroupMembership
-         *
-         * @description
-         *
-         * Fetches belongsTo relation member.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `refresh` – `{boolean=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Member` object.)
-         * </em>
-         */
-        R.member = function() {
-          var TargetResource = $injector.get("Member");
-          var action = TargetResource["::get::GroupMembership::member"];
-          return action.apply(R, arguments);
-        };
-
-    return R;
-  }]);
-
-/**
- * @ngdoc object
- * @name lbServices.GroupLeadership
- * @header lbServices.GroupLeadership
- * @object
- *
- * @description
- *
- * A $resource object for interacting with the `GroupLeadership` model.
- *
- * ## Example
- *
- * See
- * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
- * for an example of using this object.
- *
- */
-module.factory(
-  "GroupLeadership",
-  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
-    var R = Resource(
-      urlBase + "/GroupLeaderships/:id",
-      { 'id': '@id' },
-      {
-
-        // INTERNAL. Use GroupLeadership.group() instead.
-        "prototype$__get__group": {
-          url: urlBase + "/GroupLeaderships/:id/group",
-          method: "GET"
-        },
-
-        // INTERNAL. Use GroupLeadership.member() instead.
-        "prototype$__get__member": {
-          url: urlBase + "/GroupLeaderships/:id/member",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#create
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Create a new instance of the model and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "create": {
-          url: urlBase + "/GroupLeaderships",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#createMany
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Create a new instance of the model and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "createMany": {
-          isArray: true,
-          url: urlBase + "/GroupLeaderships",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#upsert
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Update an existing model instance or insert a new one into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "upsert": {
-          url: urlBase + "/GroupLeaderships",
-          method: "PUT"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#exists
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Check whether a model instance exists in the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `exists` – `{boolean=}` - 
-         */
-        "exists": {
-          url: urlBase + "/GroupLeaderships/:id/exists",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#findById
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Find a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         *  - `filter` – `{object=}` - Filter defining fields and include
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "findById": {
-          url: urlBase + "/GroupLeaderships/:id",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#find
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Find all instances of the model matched by filter from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-         *
-         * @param {function(Array.<Object>,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Array.<Object>} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "find": {
-          isArray: true,
-          url: urlBase + "/GroupLeaderships",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#findOne
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Find first instance of the model matched by filter from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "findOne": {
-          url: urlBase + "/GroupLeaderships/findOne",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#updateAll
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Update instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        "updateAll": {
-          url: urlBase + "/GroupLeaderships/update",
-          method: "POST"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#deleteById
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        "deleteById": {
-          url: urlBase + "/GroupLeaderships/:id",
-          method: "DELETE"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#count
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Count instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `count` – `{number=}` - 
-         */
-        "count": {
-          url: urlBase + "/GroupLeaderships/count",
-          method: "GET"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#prototype$updateAttributes
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Update attributes for a model instance and persist it into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        "prototype$updateAttributes": {
-          url: urlBase + "/GroupLeaderships/:id",
-          method: "PUT"
-        },
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#createChangeStream
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Create a change stream.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         *  - `options` – `{object=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * Data properties:
-         *
-         *  - `changes` – `{ReadableStream=}` - 
-         */
-        "createChangeStream": {
-          url: urlBase + "/GroupLeaderships/change-stream",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.findById() instead.
-        "::findById::Member::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.destroyById() instead.
-        "::destroyById::Member::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.updateById() instead.
-        "::updateById::Member::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Members/:id/groupLeaderships/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships() instead.
-        "::get::Member::groupLeaderships": {
-          isArray: true,
-          url: urlBase + "/Members/:id/groupLeaderships",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.create() instead.
-        "::create::Member::groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.createMany() instead.
-        "::createMany::Member::groupLeaderships": {
-          isArray: true,
-          url: urlBase + "/Members/:id/groupLeaderships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.destroyAll() instead.
-        "::delete::Member::groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Member.groupLeaderships.count() instead.
-        "::count::Member::groupLeaderships": {
-          url: urlBase + "/Members/:id/groupLeaderships/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.findById() instead.
-        "::findById::Group::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.destroyById() instead.
-        "::destroyById::Group::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.updateById() instead.
-        "::updateById::Group::groupLeaderships": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Groups/:id/groupLeaderships/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships() instead.
-        "::get::Group::groupLeaderships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.create() instead.
-        "::create::Group::groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.createMany() instead.
-        "::createMany::Group::groupLeaderships": {
-          isArray: true,
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.destroyAll() instead.
-        "::delete::Group::groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Group.groupLeaderships.count() instead.
-        "::count::Group::groupLeaderships": {
-          url: urlBase + "/Groups/:id/groupLeaderships/count",
-          method: "GET"
-        },
-      }
-    );
-
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#updateOrCreate
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Update an existing model instance or insert a new one into the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *   This method does not accept any parameters.
-         *   Supply an empty object or omit this argument altogether.
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `GroupLeadership` object.)
-         * </em>
-         */
-        R["updateOrCreate"] = R["upsert"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#update
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Update instances of the model matched by where from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `where` – `{object=}` - Criteria to match model instances
-         *
-         * @param {Object} postData Request data.
-         *
-         * This method expects a subset of model properties as request parameters.
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["update"] = R["updateAll"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#destroyById
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["destroyById"] = R["deleteById"];
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#removeById
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Delete a model instance by id from the data source.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - Model id
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * This method returns no data.
-         */
-        R["removeById"] = R["deleteById"];
-
-
-    /**
-    * @ngdoc property
-    * @name lbServices.GroupLeadership#modelName
-    * @propertyOf lbServices.GroupLeadership
-    * @description
-    * The name of the model represented by this $resource,
-    * i.e. `GroupLeadership`.
-    */
-    R.modelName = "GroupLeadership";
-
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#group
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Fetches belongsTo relation group.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `refresh` – `{boolean=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Group` object.)
-         * </em>
-         */
-        R.group = function() {
-          var TargetResource = $injector.get("Group");
-          var action = TargetResource["::get::GroupLeadership::group"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.GroupLeadership#member
-         * @methodOf lbServices.GroupLeadership
-         *
-         * @description
-         *
-         * Fetches belongsTo relation member.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `refresh` – `{boolean=}` - 
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Member` object.)
-         * </em>
-         */
-        R.member = function() {
-          var TargetResource = $injector.get("Member");
-          var action = TargetResource["::get::GroupLeadership::member"];
           return action.apply(R, arguments);
         };
 
@@ -7568,6 +5998,1576 @@ module.factory(
         R.type = function() {
           var TargetResource = $injector.get("Type");
           var action = TargetResource["::get::GroupType::type"];
+          return action.apply(R, arguments);
+        };
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.GroupMember
+ * @header lbServices.GroupMember
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `GroupMember` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "GroupMember",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/GroupMembers/:id",
+      { 'id': '@id' },
+      {
+
+        // INTERNAL. Use GroupMember.group() instead.
+        "prototype$__get__group": {
+          url: urlBase + "/GroupMembers/:id/group",
+          method: "GET"
+        },
+
+        // INTERNAL. Use GroupMember.member() instead.
+        "prototype$__get__member": {
+          url: urlBase + "/GroupMembers/:id/member",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#create
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/GroupMembers",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#createMany
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/GroupMembers",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#upsert
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/GroupMembers",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#exists
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/GroupMembers/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#findById
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/GroupMembers/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#find
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/GroupMembers",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#findOne
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/GroupMembers/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#updateAll
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "updateAll": {
+          url: urlBase + "/GroupMembers/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#deleteById
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "deleteById": {
+          url: urlBase + "/GroupMembers/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#count
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/GroupMembers/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#prototype$updateAttributes
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/GroupMembers/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#createChangeStream
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/GroupMembers/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupMembers.findById() instead.
+        "::findById::Member::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupMembers/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Member.groupMembers.destroyById() instead.
+        "::destroyById::Member::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupMembers/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Member.groupMembers.updateById() instead.
+        "::updateById::Member::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupMembers/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Member.groupMembers() instead.
+        "::get::Member::groupMembers": {
+          isArray: true,
+          url: urlBase + "/Members/:id/groupMembers",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Member.groupMembers.create() instead.
+        "::create::Member::groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupMembers.createMany() instead.
+        "::createMany::Member::groupMembers": {
+          isArray: true,
+          url: urlBase + "/Members/:id/groupMembers",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupMembers.destroyAll() instead.
+        "::delete::Member::groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Member.groupMembers.count() instead.
+        "::count::Member::groupMembers": {
+          url: urlBase + "/Members/:id/groupMembers/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupMembers.findById() instead.
+        "::findById::Group::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupMembers.destroyById() instead.
+        "::destroyById::Group::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupMembers.updateById() instead.
+        "::updateById::Group::groupMembers": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupMembers/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Group.groupMembers() instead.
+        "::get::Group::groupMembers": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupMembers.create() instead.
+        "::create::Group::groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupMembers.createMany() instead.
+        "::createMany::Group::groupMembers": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupMembers.destroyAll() instead.
+        "::delete::Group::groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupMembers.count() instead.
+        "::count::Group::groupMembers": {
+          url: urlBase + "/Groups/:id/groupMembers/count",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#updateOrCreate
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupMember` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#update
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#destroyById
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#removeById
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.GroupMember#modelName
+    * @propertyOf lbServices.GroupMember
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `GroupMember`.
+    */
+    R.modelName = "GroupMember";
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#group
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Fetches belongsTo relation group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.group = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::get::GroupMember::group"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupMember#member
+         * @methodOf lbServices.GroupMember
+         *
+         * @description
+         *
+         * Fetches belongsTo relation member.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Member` object.)
+         * </em>
+         */
+        R.member = function() {
+          var TargetResource = $injector.get("Member");
+          var action = TargetResource["::get::GroupMember::member"];
+          return action.apply(R, arguments);
+        };
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.GroupLeader
+ * @header lbServices.GroupLeader
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `GroupLeader` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "GroupLeader",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/GroupLeaders/:id",
+      { 'id': '@id' },
+      {
+
+        // INTERNAL. Use GroupLeader.group() instead.
+        "prototype$__get__group": {
+          url: urlBase + "/GroupLeaders/:id/group",
+          method: "GET"
+        },
+
+        // INTERNAL. Use GroupLeader.member() instead.
+        "prototype$__get__member": {
+          url: urlBase + "/GroupLeaders/:id/member",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#create
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/GroupLeaders",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#createMany
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/GroupLeaders",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#upsert
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/GroupLeaders",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#exists
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/GroupLeaders/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#findById
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/GroupLeaders/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#find
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/GroupLeaders",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#findOne
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/GroupLeaders/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#updateAll
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "updateAll": {
+          url: urlBase + "/GroupLeaders/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#deleteById
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        "deleteById": {
+          url: urlBase + "/GroupLeaders/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#count
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/GroupLeaders/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#prototype$updateAttributes
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/GroupLeaders/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#createChangeStream
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/GroupLeaders/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.findById() instead.
+        "::findById::Member::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.destroyById() instead.
+        "::destroyById::Member::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.updateById() instead.
+        "::updateById::Member::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Members/:id/groupLeaders/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Member.groupLeaders() instead.
+        "::get::Member::groupLeaders": {
+          isArray: true,
+          url: urlBase + "/Members/:id/groupLeaders",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.create() instead.
+        "::create::Member::groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.createMany() instead.
+        "::createMany::Member::groupLeaders": {
+          isArray: true,
+          url: urlBase + "/Members/:id/groupLeaders",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.destroyAll() instead.
+        "::delete::Member::groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Member.groupLeaders.count() instead.
+        "::count::Member::groupLeaders": {
+          url: urlBase + "/Members/:id/groupLeaders/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.findById() instead.
+        "::findById::Group::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.destroyById() instead.
+        "::destroyById::Group::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.updateById() instead.
+        "::updateById::Group::groupLeaders": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/groupLeaders/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Group.groupLeaders() instead.
+        "::get::Group::groupLeaders": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.create() instead.
+        "::create::Group::groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.createMany() instead.
+        "::createMany::Group::groupLeaders": {
+          isArray: true,
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.destroyAll() instead.
+        "::delete::Group::groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.groupLeaders.count() instead.
+        "::count::Group::groupLeaders": {
+          url: urlBase + "/Groups/:id/groupLeaders/count",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#updateOrCreate
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `GroupLeader` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#update
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#destroyById
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#removeById
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.GroupLeader#modelName
+    * @propertyOf lbServices.GroupLeader
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `GroupLeader`.
+    */
+    R.modelName = "GroupLeader";
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#group
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Fetches belongsTo relation group.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.group = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::get::GroupLeader::group"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.GroupLeader#member
+         * @methodOf lbServices.GroupLeader
+         *
+         * @description
+         *
+         * Fetches belongsTo relation member.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Member` object.)
+         * </em>
+         */
+        R.member = function() {
+          var TargetResource = $injector.get("Member");
+          var action = TargetResource["::get::GroupLeader::member"];
           return action.apply(R, arguments);
         };
 

@@ -1,5 +1,5 @@
 {
-  "name": "GroupLeadership",
+  "name": "GroupLeader",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
