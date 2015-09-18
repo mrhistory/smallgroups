@@ -41,18 +41,6 @@
     "dataSource": "mainDs",
     "public": true
   },
-  "GroupMembership": {
-    "dataSource": "mainDs",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "GroupLeadership": {
-    "dataSource": "mainDs",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
   "State": {
     "dataSource": "mainDs",
     "public": true,
@@ -66,6 +54,18 @@
     "$resolved": true
   },
   "GroupType": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "GroupMember": {
+    "dataSource": "mainDs",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "GroupLeader": {
     "dataSource": "mainDs",
     "public": true,
     "$promise": {},

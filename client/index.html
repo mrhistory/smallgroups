@@ -6,18 +6,16 @@
     <link rel="stylesheet" type="text/css" href="vendor/ng-tags-input/ng-tags-input.css">
     <link rel="Stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-    <div ng-app="smallGroups">
-      <div class="view-container">
-        <div ng-include="'views/partials/navbar.html'"></div>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 flash fade" flash-alert active-class="in alert">
-            <span class="alert-message">{{flash.message}}</span>
-            <button type="button" class="close" ng-click="hide()">&times;</button>
-          </div>
+  <body ng-app="smallGroups">
+    <div class="view-container">
+      <div ng-include="'views/partials/navbar.html'"></div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 flash fade" flash-alert active-class="in alert">
+          <span class="alert-message">{{flash.message}}</span>
+          <button type="button" class="close" ng-click="hide()">&times;</button>
         </div>
-        <div class="view-frame" ng-view="true"></div>
       </div>
+      <div class="view-frame" ng-view="true"></div>
     </div>
 
     <!-- Libraries -->

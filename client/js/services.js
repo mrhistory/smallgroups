@@ -1,27 +1,27 @@
 (function(sg) {
-  sg.app.service('GroupService', ['Group', 'Member', 'Type', 'GroupLeadership', 'GroupMembership', 'GroupType',
+  sg.app.service('GroupService', ['Group', 'Member', 'Type', 'GroupLeader', 'GroupMember', 'GroupType',
     function(Group, Member, Type, GroupLeadership, GroupMembership, GroupType) {
       this.getGroupMembers = function(groupId, cb) {
-        Group.groupMemberships({id: groupId}, function(list) {
-          var groupMemberships = list;
-          groupMemberships.forEach(function(groupMembership) {
-            Member.findById({id: groupMembership.memberId}, function(member) {
-              groupMembership.member = member;
+        Group.groupMembers({id: groupId}, function(list) {
+          var groupMembers = list;
+          groupMembers.forEach(function(groupMember) {
+            Member.findById({id: groupMember.memberId}, function(member) {
+              groupMember.member = member;
             });
           });
-          cb(groupMemberships);
+          cb(groupMembers);
         });
       };
 
       this.getGroupLeaders = function(groupId, cb) {
-        Group.groupLeaderships({id: groupId}, function(list) {
-          var groupLeaderships = list;
-          groupLeaderships.forEach(function(groupLeadership) {
-            Member.findById({id: groupLeadership.memberId}, function(member) {
-              groupLeadership.member = member;
+        Group.groupLeaders({id: groupId}, function(list) {
+          var groupLeaders = list;
+          groupLeaders.forEach(function(groupLeader) {
+            Member.findById({id: groupLeader.memberId}, function(member) {
+              groupLeader.member = member;
             });
           });
-          cb(groupLeaderships);
+          cb(groupLeaders);
         })
       };
 
@@ -37,16 +37,20 @@
         });
       };
 
-      this.createGroup = function(group, groupMembers = [], groupLeaders = [], groupTypes = [], cb) {
+      this.createGroup = function(group, groupMembers, groupLeaders, groupTypes, cb) {
+        var groupMembers = groupMembers || [];
+        var groupLeaders = groupLeaders || [];
+        var groupTypes = groupTypes || [];
+        
         Group.create(group, function(group) {
           groupLeaders.forEach(function(groupLeader) {
-            GroupLeadership.create({ groupId: group.id, memberId: groupLeader.id }, function(){},
+            GroupLeader.create({ groupId: group.id, memberId: groupLeader.id }, function(){},
               function(httpResponse) {
                 cb(httpResponse.data.error.message);
               });
           });
           groupMembers.forEach(function(groupMember) {
-            GroupMembership.create({ groupId: group.id, memberId: groupMember.id }, function() {},
+            GroupMember.create({ groupId: group.id, memberId: groupMember.id }, function() {},
               function(httpResponse) {
                 cb(httpResponse.data.error.message);
               });

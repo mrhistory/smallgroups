@@ -32,14 +32,14 @@
   },
   "validations": [],
   "relations": {
-    "groupMemberships": {
+    "groupMembers": {
       "type": "hasMany",
-      "model": "GroupMembership",
+      "model": "GroupMember",
       "foreignKey": ""
     },
-    "groupLeaderships": {
+    "groupLeaders": {
       "type": "hasMany",
-      "model": "GroupLeadership",
+      "model": "GroupLeader",
       "foreignKey": ""
     }
   },

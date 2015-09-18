@@ -1,5 +1,5 @@
 {
-  "name": "GroupMembership",
+  "name": "GroupMember",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,

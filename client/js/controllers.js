@@ -4,11 +4,11 @@
       Group.findById({id: $routeParams.groupId},
         function(group) { 
           $scope.group = group;
-          GroupService.getGroupMembers($scope.group.id, function(groupMemberships) {
-            $scope.group.groupMemberships = groupMemberships;
+          GroupService.getGroupMembers($scope.group.id, function(groupMembers) {
+            $scope.group.groupMembers = groupMembers;
           });
-          GroupService.getGroupLeaders($scope.group.id, function(groupLeaderships) {
-            $scope.group.groupLeaderships = groupLeaderships;
+          GroupService.getGroupLeaders($scope.group.id, function(groupLeaders) {
+            $scope.group.groupLeaders = groupLeaders;
           });
           GroupService.getGroupTypes($scope.group.id, function(groupTypes) {
             $scope.group.groupTypes = groupTypes;
@@ -60,7 +60,7 @@
         function(list) {
           $scope.groups = list;
           $scope.groups.forEach(function(group) {
-            Group.groupMemberships.count({id: group.id}, function(httpResponse) {
+            Group.groupMembers.count({id: group.id}, function(httpResponse) {
               group.currentSize = httpResponse.count;
             });
           });

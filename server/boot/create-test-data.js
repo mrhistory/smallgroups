@@ -78,10 +78,10 @@ module.exports = function(app) {
 
 	//add members to groups
 	function addMembersToGroups(groups, members, cb) {
-		db.automigrate('GroupMembership', function(err) {
+		db.automigrate('GroupMember', function(err) {
       if (err) return cb(err);
-      var GroupMembership = app.models.GroupMembership;
-      GroupMembership.create([
+      var GroupMember = app.models.GroupMember;
+      GroupMember.create([
         {group: groups[0], member: members[0]},
         {group: groups[0], member: members[1]},
         {group: groups[0], member: members[2]},
@@ -96,10 +96,10 @@ module.exports = function(app) {
 	}
 
   function addLeadersToGroups(groups, members, cb) {
-    db.automigrate('GroupLeadership', function(err) {
+    db.automigrate('GroupLeader', function(err) {
       if (err) return cb(err);
-      var GroupLeadership = app.models.GroupLeadership;
-      GroupLeadership.create([
+      var GroupLeader = app.models.GroupLeader;
+      GroupLeader.create([
         {group: groups[0], member: members[1]},
         {group: groups[0], member: members[2]},
         {group: groups[2], member: members[1]},
