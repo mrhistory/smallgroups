@@ -37,7 +37,11 @@
         });
       };
 
-      this.createGroup = function(group, groupMembers = [], groupLeaders = [], groupTypes = [], cb) {
+      this.createGroup = function(group, groupMembers, groupLeaders, groupTypes, cb) {
+        var groupMembers = groupMembers || [];
+        var groupLeaders = groupLeaders || [];
+        var groupTypes = groupTypes || [];
+        
         Group.create(group, function(group) {
           groupLeaders.forEach(function(groupLeader) {
             GroupLeader.create({ groupId: group.id, memberId: groupLeader.id }, function(){},

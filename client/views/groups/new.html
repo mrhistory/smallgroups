@@ -17,8 +17,7 @@
                     display-property="name"
                     placeholder= "Add a group type"
                     replace-spaces-with-dashes="false"
-                    add-from-autocomplete-only="false"
-                    required="true">
+                    add-from-autocomplete-only="false">
           <auto-complete source="findTypes($query)"
                           min-length="1"
                           debouce-delay="0"
@@ -32,8 +31,7 @@
                     display-property="fullNameAndEmail"
                     placeholder= "Add a group leader"
                     replace-spaces-with-dashes="false"
-                    add-from-autocomplete-only="true"
-                    required="true">
+                    add-from-autocomplete-only="true">
           <auto-complete source="findMembers($query)"
                           min-length="1"
                           debouce-delay="0"
