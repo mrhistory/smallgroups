@@ -15,6 +15,35 @@ describe('Small Groups App', function() {
     expect(browser.getCurrentUrl()).toEqual(helpers.host + '/');
   });
 
+  it('should sign up a new member', function() {
+    helpers.logout().then(function() {
+      element(by.linkText('Sign Up')).click().then(function() {
+        element(by.model('newMember.firstName')).sendKeys('Mr.');
+        element(by.model('newMember.lastName')).sendKeys('Spock');
+        element(by.model('newMember.email')).sendKeys('mspock@starfleet.gov');
+        element(by.model('newMember.password')).sendKeys('prosper');
+        element(by.model('newMember.passwordConfirmation')).sendKeys('prosper');
+        element(by.partialButtonText('Sign Up')).click().then(function() {
+          expect(browser.getCurrentUrl()).toEqual(helpers.host + '/');
+        });
+      });
+    });
+  });
+
+  it('should update logged in member', function() {
+    helpers.logout().then(function() {
+      helpers.login('mspock@starfleet.gov', 'prosper').then(function() {
+        element(by.linkText('My Account')).click().then(function() {
+          element(by.model('member.firstName')).clear().sendKeys('Spock');
+          element(by.model('member.lastName')).clear().sendKeys('Son of Sarek');
+          element(by.partialButtonText('Save')).click().then(function() {
+            expect(element(by.className('alert-message')).getText()).toEqual('Member saved.');
+          });
+        });
+      });
+    });
+  });
+
   it('should display a list of groups', function() {
     helpers.navToGroups().then(function() {
       expect(element(by.repeater('group in groups').row(0).column('group.name')).isPresent()).toBe(true);
@@ -29,7 +58,7 @@ describe('Small Groups App', function() {
     });
   });
 
-  it('should create a new group', function() {
+  it('should create a new group', function() { // Presently failing due to a Protractor bug. Fix when a workaround is found
     var name = 'New Group';
     var description = 'Super cool, new group.';
     var maxSize = 5;
@@ -40,8 +69,8 @@ describe('Small Groups App', function() {
         element(by.model('group.description')).sendKeys(description);
         element(by.model('group.maxSize')).sendKeys(maxSize);
         element(by.partialButtonText('Create')).click().then(function() {
-          element(by.repeater('group in groups').row(4).column('group.name')).click().then(function() {
-            expect(element(by.model("group.name")).getText()).toEqual(name);
+          element(by.repeater('group in groups').row(3).column('group.name')).click().then(function() {
+            expect(element(by.tagName('legend')).getText()).toEqual(name);
           });
         });
       });

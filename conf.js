@@ -4,7 +4,5 @@ exports.config = {
   specs: ['./spec/spec.js'],
   multiCapabilities: [{
     browserName: 'firefox'
-  }, {
-    browserName: 'chrome'
   }]
 }
