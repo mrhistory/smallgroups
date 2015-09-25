@@ -90,7 +90,7 @@
   ]);
 
 
-  sg.app.controller('MainController', [ '$scope', '$routeParams', '$resource',
+  sg.app.controller('HomeController', [ '$scope', '$routeParams', '$resource',
     function($scope, $routeParams, $resource) {
       
     }
@@ -138,7 +138,7 @@
         }
       };
 
-      $scope.goToMain = function() { $location.path('/'); };
+      $scope.goToHome = function() { $location.path('/'); };
       $scope.goToGroups = function() { $location.path('/groups'); };
       $scope.goToLogin = function() { $location.path('/login'); };
       $scope.goToSignUp = function() { $location.path('/signup'); };
